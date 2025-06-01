@@ -1,0 +1,148 @@
+/* Use a modern, easy-to-read font */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #eaf6fb; /* light blue background for the page */
+}
+
+/* Style for the CTA banner section */
+.cta-banner {
+  background-color: #1e7fa3; /* fallback color */
+  color: #14425a; /* darker blue text for better contrast */
+  text-align: center;
+  padding: 60px 20px; /* make the banner tall and spacious */
+  /* Set background image */
+  background-image: url('img/cta-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative; /* Needed for overlay */
+  overflow: hidden;
+}
+
+/* Light overlay for the banner */
+.cta-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Slightly darker, semi-transparent overlay */
+  background: rgba(255, 255, 255, 0.6);
+  z-index: 0;
+}
+
+/* Ensure content is above the overlay */
+.cta-banner h1,
+.cta-banner p,
+.cta-banner .cta-button {
+  position: relative;
+  z-index: 1;
+}
+
+/* Large main heading */
+.cta-banner h1 {
+  font-size: 2.5em;
+  margin-bottom: 32px; /* increased space below heading */
+  letter-spacing: 1px;
+}
+
+/* Short description */
+.cta-banner p {
+  font-size: 1.2em;
+  margin-bottom: 40px; /* increased space below description */
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Eye-catching button */
+.cta-button {
+  display: inline-block;
+  background-color: #2ed8c3; /* bright teal */
+  color: #1e7fa3;
+  padding: 15px 35px;
+  text-decoration: none;
+  font-size: 1.1em;
+  border-radius: 5px;
+  font-weight: bold;
+  /* Make the button stand out */
+  box-shadow: 0 2px 8px rgba(30, 127, 163, 0.15);
+  transition: background 0.2s;
+}
+
+/* Button hover effect */
+.cta-button:hover {
+  background-color: #23b6a0;
+  color: #ffffff;
+}
+
+/* Simple site header */
+.site-header {
+  background-color: #17607e; /* slightly darker blue for contrast */
+  color: #ffffff;
+  text-align: center;
+  padding: 18px 0;
+}
+
+/* Site name style */
+.site-header h2 {
+  margin: 0;
+  font-size: 1.7em;
+  letter-spacing: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Info section below the banner */
+.info-section {
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto 0 auto; /* center on page with space above */
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(30, 127, 163, 0.08);
+  padding: 30px 20px;
+  /* Use table display for two columns (beginner-friendly) */
+  display: table;
+}
+
+/* Image column */
+.info-image {
+  display: table-cell;
+  width: 50%;
+  max-width: 300px;
+  vertical-align: middle;
+  border-radius: 6px;
+  margin-right: 20px;
+}
+
+/* Text column */
+.info-text {
+  display: table-cell;
+  width: 50%;
+  vertical-align: middle;
+  padding-left: 30px;
+  color: #14425a;
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 700px) {
+  .info-section {
+    display: block;
+    text-align: center;
+    padding: 20px 5px;
+  }
+  .info-image,
+  .info-text {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 20px auto;
+    padding: 0;
+  }
+  .info-text {
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+}
